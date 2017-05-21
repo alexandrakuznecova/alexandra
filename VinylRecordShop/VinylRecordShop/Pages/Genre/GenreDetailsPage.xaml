@@ -1,0 +1,48 @@
+﻿<Page x:Class="VinylRecordShop.Pages.Genre.GenreDetailsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      WindowTitle="Информация о жанре">
+
+    <Page.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Width" Value="100px" />
+            <Setter Property="Margin" Value="5 5 0 5" />
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="Margin" Value="5 5 0 5" />
+            <Setter Property="Height" Value="25" />
+        </Style>
+        <Style TargetType="DockPanel">
+            <Setter Property="Width" Value="300px" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5 5 0 5" />
+            <Setter Property="HorizontalAlignment" Value="Right" />
+            <Setter Property="Width" Value="75px" />
+        </Style>
+    </Page.Resources>
+    
+    <Grid Margin="10" HorizontalAlignment="Stretch">
+        <Border Style="{StaticResource FormBorderStyle}" DockPanel.Dock="Top">
+            <StackPanel>
+                <DockPanel>
+                    <Label>Наименование</Label>
+                    <TextBox Text="{Binding Name , ValidatesOnDataErrors=True, Mode=TwoWay}" MaxLength="100"/>
+                </DockPanel>
+                <DockPanel>
+                    <Label>Описание</Label>
+                    <TextBox Text="{Binding Description, Mode=TwoWay}"  MaxLength="400"/>
+                </DockPanel>
+                <DockPanel LastChildFill="False">
+                    <Button Content="Сохранить" Command="{Binding SaveCommand}"/>
+                    <Button Content="Отмена" Command="{Binding CancelCommand}"/>
+                </DockPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>
