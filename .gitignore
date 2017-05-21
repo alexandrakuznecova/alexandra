@@ -1,0 +1,11 @@
+﻿################################################################################
+# Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
+################################################################################
+
+/VinylRecordShop/packages
+/VinylRecordShop/VinylRecodShop.Model/bin
+/VinylRecordShop/VinylRecodShop.Model/obj
+/VinylRecordShop/VinylRecordShop/bin
+/VinylRecordShop/VinylRecordShop/obj
+/VinylRecordShop/VinylRecordShop.Services/bin
+/VinylRecordShop/VinylRecordShop.Services/obj
